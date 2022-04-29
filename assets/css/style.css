@@ -8,21 +8,31 @@ Farbe: #323A45 / #848484 */
 ##################################
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,400&display=swap');
 
 * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        /* border: 1px dotted red; */
 }
 
 html {
         font-size: 62.5%;
+        width: 80%;
+        margin: 0 auto;
 }
 
 body {
         max-width: 1440px;
-        margin: 0 auto;
+        margin: 5% auto 0 auto;
+        font-family: 'Karla', sans-serif;
+}
+
+p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: #323A45;
 }
 
 .space {
@@ -42,14 +52,174 @@ body {
 # # # # # # # # # # # # # # 
 */
 
+header nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 5% 0;
+}
+
+header nav ul {
+        display: flex;
+        width: 35%;
+        justify-content: space-between;
+}
+
+header nav ul li {
+        list-style: none;
+        font-size: 1.5rem;
+}
+
 /* 
 ##################################
         MAIN
 ##################################
 */
 
+img {
+        width: 100%;
+}
+
+.grid1 {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+                "img1 img1 img1"
+                "img2 img3 img4"
+                "img5 img6 img7"
+        ;
+        gap: 30px;
+}
+
+.img1 {
+        grid-area: img1;
+}
+
+.img2 {
+        grid-area: img2;
+}
+
+.img3 {
+        grid-area: img3;
+}
+
+.img4 {
+        grid-area: img4;
+}
+
+.img5 {
+        grid-area: img5;
+}
+
+.img6 {
+        grid-area: img6;
+}
+
+.img7 {
+        grid-area: img7;
+}
+
+.img1>div,
+.img2>div,
+.img3>div,
+.img4>div,
+.img5>div,
+.img6>div,
+.img7>div {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0 0 0;
+}
+
+.img1 div div p:nth-of-type(2),
+.img2 div div p:nth-of-type(2),
+.img3 div div p:nth-of-type(2),
+.img4 div div p:nth-of-type(2),
+.img5 div div p:nth-of-type(2),
+.img6 div div p:nth-of-type(2),
+.img7 div div p:nth-of-type(2) {
+        color: #848484;
+        margin: 0 0 20px 0;
+}
+
+.grid2 {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+                "img8 img8 img8"
+                "img9 img10 img11"
+        ;
+        gap: 30px;
+}
+
+.img8 {
+        grid-area: img8;
+}
+
+.img9 {
+        grid-area: img9;
+}
+
+.img10 {
+        grid-area: img10;
+}
+
+.img11 {
+        grid-area: img11;
+}
+
+.img8>div,
+.img9>div,
+.img10>div,
+.img11>div {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0 0 0;
+}
+
+.img8 div div p:nth-of-type(2),
+.img9 div div p:nth-of-type(2),
+.img10 div div p:nth-of-type(2),
+.img11 div div p:nth-of-type(2) {
+        color: #848484;
+        margin: 0 0 20px 0;
+}
+
 /* 
 ##################################
         FOOTER
 ##################################
 */
+
+footer article {
+        display: flex;
+        justify-content: space-between;
+        width: 85%;
+}
+
+footer article div:nth-of-type(1) {
+        width: 30%
+}
+
+footer article div p:nth-of-type(1) {
+        font-weight: 700;
+        margin: 0 0 20px 0;
+}
+
+footer article div:nth-of-type(1) span {
+        font-weight: 700;
+}
+
+footer article div:nth-of-type(3) span {
+        font-weight: 800;
+}
+
+footer article div:nth-of-type(3) p:nth-of-type(3) {
+        font-style: italic;
+}
+
+footer>p {
+        color: #848484;
+        margin: 4% 0 3% 0;
+}
