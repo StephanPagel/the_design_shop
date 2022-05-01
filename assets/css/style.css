@@ -1,7 +1,3 @@
-/* Font: Karla
-Farbe: #323A45 / #848484 */
-/* font-family: 'Karla', sans-serif; */
-
 /* 
 ##################################
         GENERAL
@@ -14,7 +10,6 @@ Farbe: #323A45 / #848484 */
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        /* border: 1px dotted red; */
 }
 
 html {
@@ -49,21 +44,9 @@ p {
 ##################################
 */
 
-/* 
-# # # # # # # # # # # # # # 
-        NAV
-# # # # # # # # # # # # # # 
-*/
-
 header {
         display: flex;
         justify-content: space-between;
-}
-
-header nav {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 0 5% 0;
 }
 
 header a {
@@ -73,6 +56,18 @@ header a {
 
 header a:hover {
         color: #848484;
+}
+
+/* 
+# # # # # # # # # # # # # # 
+        NAV
+# # # # # # # # # # # # # # 
+*/
+
+header nav {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 5% 0;
 }
 
 header nav ul {
@@ -119,7 +114,7 @@ header div span {
                 "img5 img6 img7"
         ;
         gap: 30px;
-        margin: 0 0 30px 0;
+        margin: 0 0 5% 0;
 }
 
 .img1 {
@@ -236,7 +231,7 @@ footer article div:nth-of-type(1) {
 
 footer article div p:nth-of-type(1) {
         font-weight: 700;
-        margin: 0 0 20px 0;
+        margin: 0 0 3% 0;
 }
 
 footer article div:nth-of-type(1) span {
@@ -256,9 +251,20 @@ footer>p {
         margin: 4% 0 3% 0;
 }
 
-/* to do: media queries */
+/* 
+##################################
+        MEDIA QUERIES
+##################################
+*/
 
 @media only screen and (max-width: 768px) {
+
+        header {
+                display: flex;
+                align-items: center;
+                margin: 0 0 5% 0;
+        }
+
         header nav ul a li {
                 display: none;
         }
@@ -276,5 +282,17 @@ footer>p {
         footer article {
                 display: flex;
                 flex-direction: column;
+        }
+
+        footer article div:nth-of-type(1) {
+                width: 100%;
+        }
+
+        footer article div p:nth-of-type(1) {
+                margin: 5% 0;
+        }
+
+        footer>p {
+                margin: 5% 0 0 0;
         }
 }
